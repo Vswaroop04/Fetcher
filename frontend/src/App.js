@@ -64,7 +64,7 @@ function App() {
         <div className="tbl-header">
           <table style={{ cellPadding: '0', cellSpacing: '0', border: '0' }}>
             <thead>
-              {data[0].user_count ? (
+              {data[0]?.user_count ? (
                 <tr>
                   <th>Country name</th>
                   <th>User Count</th>
@@ -105,7 +105,7 @@ function App() {
                       <tr>
                         <td>{item._id}</td>
                         <td>{item.user_count}</td>
-                        <td>{item.avg_income}</td>
+                        <td>{item.avg_income} $</td>
                       </tr>
                     ) : (
                       <tr>
