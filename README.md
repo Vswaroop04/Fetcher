@@ -1,4 +1,4 @@
-# MERN Stack Mini Application
+# Mini MERN Stack Application
 
 This is a web application built using the MERN stack that allows us to fetch data using api from backend and show it in interface according to dropdown
 
@@ -6,6 +6,9 @@ The application is currently hosted at:
 
  1. [Netlify (Alternative)](https://rad-puffpuff-2b16cc.netlify.app/)
 
+Backend Hosted at
+
+https://oru-phones.onrender.com/
 
 ## Technologies
 
