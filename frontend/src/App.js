@@ -21,7 +21,7 @@ function App() {
     setLoader(true)
     console.log(event?.target.value)
 
-    await fetch(`${process.env.REACT_APP_API_URL}/${event?.target.value}`)
+    await fetch(`https://radiant-druid-592b18.netlify.app/${event?.target.value}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
