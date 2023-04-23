@@ -4,7 +4,7 @@ This is a web application built using the MERN stack that allows us to fetch dat
 
 The application is currently hosted at:
 
- 1. [Netlify (Alternative)](https://rad-puffpuff-2b16cc.netlify.app/)
+ 1. [Netlify](https://radiant-druid-592b18.netlify.app/)
 
 Backend Hosted at
 
