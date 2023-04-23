@@ -4,11 +4,10 @@ function App() {
   const [data, setData] = useState([])
   const [loader, setLoader] = useState(false)
 
-  console.log(process.env.REACT_APP_API_URL)
 
   useEffect(() => {
     setLoader(true)
-    fetch(`${process.env.REACT_APP_API_URL}/userslow5`)
+    fetch(`https://oru-phones.onrender.com/userslow5`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
