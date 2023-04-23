@@ -6,9 +6,10 @@ const express = require('express')
 var cors = require('cors')
 const mongoose = require('mongoose')
 const router = express.Router()
+require('dotenv').config()
 
 // Connection URI
-const uri = 'mongodb+srv://vswaroop04:vishnu2003@cluster0.jongyzs.mongodb.net/'
+const uri = `mongodb+srv://vswaroop04:${process.env.mongo_password}@cluster0.jongyzs.mongodb.net/`
 
 // Database Name
 const dbName = 'oru_phones'
@@ -35,7 +36,10 @@ app.use('/', router)
 router.get('/userslow5', (req, res) => {
   db.collection('oruphones')
     .find({
-      $and: [{ car: { $in: ['BMW', 'Mercedes'] } }, { income: { $lt: '$5' } }],
+      $and: [
+        { car: { $in: ['BMW', 'Mercedes-Benz'] } },
+        { income: { $lt: '$5' } },
+      ],
     })
     .toArray(function (err, docs) {
       if (err) {
@@ -90,7 +94,7 @@ router.get('/usersbmwandmercedes', (req, res) => {
   db.collection('oruphones')
     .find({
       $and: [
-        { car: { $in: ['BMW', 'Mercedes'] } },
+        { car: { $in: ['BMW', 'Mercedes-Benz', 'Audi'] } },
         { email: { $not: { $regex: /\d/ } } },
       ],
     })
