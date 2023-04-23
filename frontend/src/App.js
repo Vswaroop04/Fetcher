@@ -21,7 +21,7 @@ function App() {
     setLoader(true)
     console.log(event?.target.value)
 
-    await fetch(`https://radiant-druid-592b18.netlify.app/${event?.target.value}`)
+    await fetch(`https://oru-phones.onrender.com/${event?.target.value}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
