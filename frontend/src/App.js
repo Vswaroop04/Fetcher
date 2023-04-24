@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     setLoader(true)
-    fetch(`https://oru-phones.onrender.com/userslow5`)
+    fetch(`http://langchain.eastus2.cloudapp.azure.com:5000/userslow5`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
@@ -21,7 +21,7 @@ function App() {
     setLoader(true)
     console.log(event?.target.value)
 
-    await fetch(`https://oru-phones.onrender.com/${event?.target.value}`)
+    await fetch(`http://langchain.eastus2.cloudapp.azure.com:5000/${event?.target.value}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
